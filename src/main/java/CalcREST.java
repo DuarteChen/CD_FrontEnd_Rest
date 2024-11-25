@@ -50,6 +50,7 @@ public String marcarConsultas_Server(String response) throws MalformedURLExcepti
 
 }
 
+
 @GET
 @Path("/listarClinicas")
 public String listarClinicas_Server() throws MalformedURLException, RemoteException, NotBoundException {
