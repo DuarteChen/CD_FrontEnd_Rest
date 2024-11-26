@@ -81,6 +81,31 @@ public String listarEspecialidades_Server(String idClinica) throws MalformedURLE
 
 }
 
+@POST
+@Path("/listarConsultas")
+public String listarConsultas_Server(String idClient) throws MalformedURLException, RemoteException, NotBoundException {
+
+
+
+	AddServerIntf addServerIntf = (AddServerIntf)Naming.lookup(addServerURL);
+    
+
+	return addServerIntf.listarConsultas(idClient);
+
+}
+
+@POST
+@Path("/removerConsulta")
+public String removerConsulta_Server(String idConsulta) throws MalformedURLException, RemoteException, NotBoundException {
+
+
+	int idConsultaInteiro = Integer.parseInt(idConsulta);
+	AddServerIntf addServerIntf = (AddServerIntf)Naming.lookup(addServerURL);
+    
+
+	return addServerIntf.removerConsulta(idConsultaInteiro);
+
+}
 		
 		
 		
