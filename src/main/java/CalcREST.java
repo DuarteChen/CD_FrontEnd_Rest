@@ -107,14 +107,20 @@ public String listarConsultas_Server(String idClient) throws MalformedURLExcepti
 
 @POST
 @Path("/removerConsulta")
-public String removerConsulta_Server(String idConsulta) throws MalformedURLException, RemoteException, NotBoundException {
+public String removerConsulta_Server(String response) throws MalformedURLException, RemoteException, NotBoundException {
 
 
+	String[] responseParts = response.split(";");
+	
+	String idConsulta = responseParts[0].trim();
+	String idClient = responseParts[1].trim();
+	
 	int idConsultaInteiro = Integer.parseInt(idConsulta);
+	int idClienteInteiro = Integer.parseInt(idClient);
 	AddServerIntf addServerIntf = (AddServerIntf)Naming.lookup(addServerURL);
     
 
-	return addServerIntf.removerConsulta(idConsultaInteiro);
+	return addServerIntf.removerConsulta(idConsultaInteiro, idClienteInteiro);
 
 }
 
