@@ -19,6 +19,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
+@WebService(targetNamespace = "http://default_package/", portName = "CalcRESTPort", serviceName = "CalcRESTService")
 @Consumes("application/json")
 @Produces("application/json")
 public class CalcREST {
@@ -260,6 +261,22 @@ public String autenticar(String response) throws IOException {
     }
     System.out.println("Credenciais erradas");
     return "0"; // Invalid username or password
+}
+
+@POST
+@Path("/locClinica")
+public String locClinica_Server(String idClinica) throws MalformedURLException, RemoteException, NotBoundException {
+	   
+	
+	//mapa
+	
+	
+	AddServerIntf addServerIntf = (AddServerIntf)Naming.lookup(addServerURL);
+	
+    
+
+	return addServerIntf.locClinica(idClinica);
+
 }
 		
 		

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CalcRESTService" targetNamespace="http://default_package/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://default_package/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://default_package/" schemaLocation="calcrest_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="listarEspecialidades_ServerResponse">
+    <wsdl:part name="parameters" element="tns:listarEspecialidades_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="marcarConsultas_ServerResponse">
+    <wsdl:part name="parameters" element="tns:marcarConsultas_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasServer">
+    <wsdl:part name="parameters" element="tns:listarConsultasServer">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IOException">
+    <wsdl:part name="IOException" element="tns:IOException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultasServerResponse">
+    <wsdl:part name="parameters" element="tns:listarConsultasServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="marcarConsultas_Server">
+    <wsdl:part name="parameters" element="tns:marcarConsultas_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MalformedURLException">
+    <wsdl:part name="MalformedURLException" element="tns:MalformedURLException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultas_ServerResponse">
+    <wsdl:part name="parameters" element="tns:listarConsultas_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarConsultas_Server">
+    <wsdl:part name="parameters" element="tns:listarConsultas_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarEspecialidades_Server">
+    <wsdl:part name="parameters" element="tns:listarEspecialidades_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="locClinica_Server">
+    <wsdl:part name="parameters" element="tns:locClinica_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="locClinica_ServerResponse">
+    <wsdl:part name="parameters" element="tns:locClinica_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticarResponse">
+    <wsdl:part name="parameters" element="tns:autenticarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerConsulta_Server">
+    <wsdl:part name="parameters" element="tns:removerConsulta_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarClinicas_ServerResponse">
+    <wsdl:part name="parameters" element="tns:listarClinicas_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerConsulta_ServerResponse">
+    <wsdl:part name="parameters" element="tns:removerConsulta_ServerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RegistarResponse">
+    <wsdl:part name="parameters" element="tns:RegistarResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NotBoundException">
+    <wsdl:part name="NotBoundException" element="tns:NotBoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarClinicas_Server">
+    <wsdl:part name="parameters" element="tns:listarClinicas_Server">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="autenticar">
+    <wsdl:part name="parameters" element="tns:autenticar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Registar">
+    <wsdl:part name="parameters" element="tns:Registar">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CalcREST">
+    <wsdl:operation name="listarEspecialidades_Server">
+      <wsdl:input name="listarEspecialidades_Server" message="tns:listarEspecialidades_Server">
+    </wsdl:input>
+      <wsdl:output name="listarEspecialidades_ServerResponse" message="tns:listarEspecialidades_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="locClinica_Server">
+      <wsdl:input name="locClinica_Server" message="tns:locClinica_Server">
+    </wsdl:input>
+      <wsdl:output name="locClinica_ServerResponse" message="tns:locClinica_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasServer">
+      <wsdl:input name="listarConsultasServer" message="tns:listarConsultasServer">
+    </wsdl:input>
+      <wsdl:output name="listarConsultasServerResponse" message="tns:listarConsultasServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removerConsulta_Server">
+      <wsdl:input name="removerConsulta_Server" message="tns:removerConsulta_Server">
+    </wsdl:input>
+      <wsdl:output name="removerConsulta_ServerResponse" message="tns:removerConsulta_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarClinicas_Server">
+      <wsdl:input name="listarClinicas_Server" message="tns:listarClinicas_Server">
+    </wsdl:input>
+      <wsdl:output name="listarClinicas_ServerResponse" message="tns:listarClinicas_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticar">
+      <wsdl:input name="autenticar" message="tns:autenticar">
+    </wsdl:input>
+      <wsdl:output name="autenticarResponse" message="tns:autenticarResponse">
+    </wsdl:output>
+      <wsdl:fault name="IOException" message="tns:IOException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsultas_Server">
+      <wsdl:input name="marcarConsultas_Server" message="tns:marcarConsultas_Server">
+    </wsdl:input>
+      <wsdl:output name="marcarConsultas_ServerResponse" message="tns:marcarConsultas_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Registar">
+      <wsdl:input name="Registar" message="tns:Registar">
+    </wsdl:input>
+      <wsdl:output name="RegistarResponse" message="tns:RegistarResponse">
+    </wsdl:output>
+      <wsdl:fault name="IOException" message="tns:IOException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultas_Server">
+      <wsdl:input name="listarConsultas_Server" message="tns:listarConsultas_Server">
+    </wsdl:input>
+      <wsdl:output name="listarConsultas_ServerResponse" message="tns:listarConsultas_ServerResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalcRESTServiceSoapBinding" type="tns:CalcREST">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="listarEspecialidades_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarEspecialidades_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarEspecialidades_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="locClinica_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="locClinica_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="locClinica_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultasServer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarConsultasServer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarConsultasServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removerConsulta_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removerConsulta_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removerConsulta_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarClinicas_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarClinicas_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarClinicas_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="autenticar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="autenticar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="autenticarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IOException">
+        <soap:fault name="IOException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="marcarConsultas_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="marcarConsultas_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="marcarConsultas_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Registar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Registar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RegistarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="IOException">
+        <soap:fault name="IOException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listarConsultas_Server">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarConsultas_Server">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarConsultas_ServerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalcRESTService">
+    <wsdl:port name="CalcRESTPort" binding="tns:CalcRESTServiceSoapBinding">
+      <soap:address location="http://localhost:8080/CD_FrontEnd_Rest/CalcRESTPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
