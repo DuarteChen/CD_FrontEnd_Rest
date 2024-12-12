@@ -25,11 +25,11 @@ import javax.ws.rs.Produces;
 public class CalcREST {
  
 	
-String addServerURL = "rmi://" + "192.168.128.2" + "/AddServer"; //Duarte
-	//String addServerURL = "rmi://" + "192.168.56.101" + "/AddServer"; //Akash
+//String addServerURL = "rmi://" + "192.168.128.2" + "/AddServer"; //Duarte
+	String addServerURL = "rmi://" + "192.168.56.101" + "/AddServer"; //Akash
 
-String ficheiroAutenticacao = "/Users/duartechen/eclipse-workspace/CD_FrontEnd_Soap/DadosUser.txt"; //Duarte
-//String ficheiroAutenticacao = "C:\\\\Users\\\\akash\\\\eclipse-workspace\\\\CD_FrontEnd_Soap\\\\DadosUser.txt"; //Akash
+//String ficheiroAutenticacao = "/Users/duartechen/eclipse-workspace/CD_FrontEnd_Soap/DadosUser.txt"; //Duarte
+String ficheiroAutenticacao = "C:\\\\Users\\\\akash\\\\eclipse-workspace\\\\CD_FrontEnd_Soap\\\\DadosUser.txt"; //Akash
 	
 @POST
 @Path("/listarConsultas")	
